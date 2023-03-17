@@ -1,0 +1,14 @@
+@import '~bootstrap/scss/bootstrap.scss';
+
+// custom styles
+@import './helpers/variables';
+@import './helpers/mixins';
+@import './helpers/utilities';
+@import './helpers/keyframes';
+@import './helpers/base';
+@import './helpers/print';
+
+// layout
+@import './layouts/navbar';
+@import './layouts/slider';
+@import './layouts/footer';
