@@ -7,6 +7,7 @@ const Projects = React.lazy(() => import('../pages/Projects'));
 const ProjectDetails = React.lazy(() => import('../pages/ProjectDetails'));
 const Services = React.lazy(() => import('../pages/Services'));
 const ServiceDetails = React.lazy(() => import('../pages/ServiceDetails'));
+const Results = React.lazy(() => import('../pages/Results'));
 const PageNotFound = React.lazy(() => import('../pages/404'));
 
 export const PUBLIC_ROUTES = [
@@ -37,6 +38,10 @@ export const PUBLIC_ROUTES = [
 	{
 		path: '/single-service',
 		component: ServiceDetails,
+	},
+	{
+		path: '/results',
+		component: Results,
 	},
 	{
 		path: '*',
