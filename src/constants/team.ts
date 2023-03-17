@@ -7,28 +7,28 @@ import member5 from '../assets/images/background/team/team-5.jpg';
 const TEAMS = [
 	{
 		img: member1,
-		name: 'Famhida Ruko',
-		cty: 'Architecture',
+		name: 'famhida-ruko',
+		cty: 'architecture',
 	},
 	{
 		img: member2,
-		name: 'Alex Pulak',
-		cty: 'Engineer',
+		name: 'alex-pulak',
+		cty: 'engineer',
 	},
 	{
 		img: member3,
-		name: 'Alex Deablow',
-		cty: 'Site Manager',
+		name: 'alex-deablow',
+		cty: 'site-manager',
 	},
 	{
 		img: member4,
-		name: 'Alex Anfantino',
-		cty: 'Engineer',
+		name: 'alex-anfantino',
+		cty: 'engineer',
 	},
 	{
 		img: member5,
-		name: 'Mishel Marsh',
-		cty: 'Founder',
+		name: 'mishel-marsh',
+		cty: 'founder',
 	},
 ];
 

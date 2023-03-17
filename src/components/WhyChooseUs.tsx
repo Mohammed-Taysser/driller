@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { BsCheck2Circle } from 'react-icons/bs';
 
 import overlay from '../assets/images/background/why-choose-us-overlay.png';
@@ -8,6 +9,8 @@ import value from '../assets/images/background/features/value.jpg';
 import vision from '../assets/images/background/features/vision.jpg';
 
 function WhyChooseUs() {
+	const { t } = useTranslation();
+
 	return (
 		<section
 			className='why-choose-us-section'
@@ -21,18 +24,17 @@ function WhyChooseUs() {
 						<div className='wrapper'>
 							<div className='title-area'>
 								<div className='sub-title'>
-									WHY CHOOSE US
+									{t('why-choose-us').toUpperCase()}
 									<div className='shape right'>
 										<div className='dots'></div>
 									</div>
 								</div>
-								<div className='sec-title'>Why Choose For Us</div>
+								<div className='sec-title'>{t('why-choose-for-us')}</div>
 							</div>
 							<p className='text-muted lead'>
-								Interactively transition performance based services vis-a-vis
-								world wide ROI. Proactively network next-generation markets
-								whereas. Conveniently grow resource-leveling partnerships for
-								top-line.
+								{t(
+									'interactively-transition-performance-based-services-vis-a-vis-world-wide-roi-proactively-network-next-generation-markets-whereas-conveniently-grow-resource-leveling-partnerships-for-top-line'
+								)}
 							</p>
 						</div>
 						<div className='d-flex align-items-start mt-5'>
@@ -87,10 +89,11 @@ function WhyChooseUs() {
 									aria-labelledby='choose-us-mission-tab'
 								>
 									<div className='single-box'>
-										<h3 className='box-title'>Mission</h3>
+										<h3 className='box-title'>{t('mission')}</h3>
 										<p className='box-text'>
-											Assertively deliver client-centered communities without
-											frictionless services.
+											{t(
+												'assertively-deliver-client-centered-communities-without-frictionless-services'
+											)}
 										</p>
 										<div className='checklist-wrap'>
 											<div className='box-img'>
@@ -100,19 +103,27 @@ function WhyChooseUs() {
 												<ul>
 													<li>
 														<BsCheck2Circle className='text-aurora fs-5' />
-														<span className='mx-1'>Commercial Services </span>
+														<span className='mx-1'>
+															{t('commercial-services')}{' '}
+														</span>
 													</li>
 													<li>
 														<BsCheck2Circle className='text-aurora fs-5' />
-														<span className='mx-1'>Residential Services</span>
+														<span className='mx-1'>
+															{t('residential-services')}
+														</span>
 													</li>
 													<li>
 														<BsCheck2Circle className='text-aurora fs-5' />
-														<span className='mx-1'>Industrial Services </span>
+														<span className='mx-1'>
+															{t('industrial-services')}{' '}
+														</span>
 													</li>
 													<li>
 														<BsCheck2Circle className='text-aurora fs-5' />
-														<span className='mx-1'>Construction Service</span>
+														<span className='mx-1'>
+															{t('construction-service')}
+														</span>
 													</li>
 												</ul>
 											</div>
@@ -126,10 +137,11 @@ function WhyChooseUs() {
 									aria-labelledby='choose-us-vision-tab'
 								>
 									<div className='single-box'>
-										<h3 className='box-title'>Vision</h3>
+										<h3 className='box-title'>{t('vision')}</h3>
 										<p className='box-text'>
-											Assertively deliver client-centered communities without
-											frictionless services.
+											{t(
+												'assertively-deliver-client-centered-communities-without-frictionless-services'
+											)}
 										</p>
 										<div className='checklist-wrap'>
 											<div className='box-img'>
@@ -139,19 +151,27 @@ function WhyChooseUs() {
 												<ul>
 													<li>
 														<BsCheck2Circle className='text-aurora fs-5' />
-														<span className='mx-1'>Commercial Services </span>
+														<span className='mx-1'>
+															{t('commercial-services')}{' '}
+														</span>
 													</li>
 													<li>
 														<BsCheck2Circle className='text-aurora fs-5' />
-														<span className='mx-1'>Residential Services</span>
+														<span className='mx-1'>
+															{t('residential-services')}
+														</span>
 													</li>
 													<li>
 														<BsCheck2Circle className='text-aurora fs-5' />
-														<span className='mx-1'>Industrial Services </span>
+														<span className='mx-1'>
+															{t('industrial-services')}{' '}
+														</span>
 													</li>
 													<li>
 														<BsCheck2Circle className='text-aurora fs-5' />
-														<span className='mx-1'>Construction Service</span>
+														<span className='mx-1'>
+															{t('construction-service')}
+														</span>
 													</li>
 												</ul>
 											</div>
@@ -165,10 +185,11 @@ function WhyChooseUs() {
 									aria-labelledby='choose-us-value-tab'
 								>
 									<div className='single-box'>
-										<h3 className='box-title'>Value</h3>
+										<h3 className='box-title'>{t('value')}</h3>
 										<p className='box-text'>
-											Assertively deliver client-centered communities without
-											frictionless services.
+											{t(
+												'assertively-deliver-client-centered-communities-without-frictionless-services'
+											)}
 										</p>
 										<div className='checklist-wrap'>
 											<div className='box-img'>
@@ -178,19 +199,27 @@ function WhyChooseUs() {
 												<ul>
 													<li>
 														<BsCheck2Circle className='text-aurora fs-5' />
-														<span className='mx-1'>Commercial Services </span>
+														<span className='mx-1'>
+															{t('commercial-services')}{' '}
+														</span>
 													</li>
 													<li>
 														<BsCheck2Circle className='text-aurora fs-5' />
-														<span className='mx-1'>Residential Services</span>
+														<span className='mx-1'>
+															{t('residential-services')}
+														</span>
 													</li>
 													<li>
 														<BsCheck2Circle className='text-aurora fs-5' />
-														<span className='mx-1'>Industrial Services </span>
+														<span className='mx-1'>
+															{t('industrial-services')}{' '}
+														</span>
 													</li>
 													<li>
 														<BsCheck2Circle className='text-aurora fs-5' />
-														<span className='mx-1'>Construction Service</span>
+														<span className='mx-1'>
+															{t('construction-service')}
+														</span>
 													</li>
 												</ul>
 											</div>
@@ -201,7 +230,11 @@ function WhyChooseUs() {
 						</div>
 					</div>
 					<div className='col-md-6 my-3'>
-						<img src={image} alt='why choose us' className='img-fluid' />
+						<img
+							src={image}
+							alt={t('why-choose-us').toString()}
+							className='img-fluid'
+						/>
 					</div>
 				</div>
 			</div>

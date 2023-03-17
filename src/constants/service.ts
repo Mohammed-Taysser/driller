@@ -13,27 +13,27 @@ import icon5 from '../assets/images/icons/category/icon-5.svg';
 const SERVICES = [
 	{
 		img: serviceImage1,
-		title: 'Projects Plannings',
+		title: 'projects-plannings',
 		icon: icon1,
 	},
 	{
 		img: serviceImage2,
-		title: 'Virtual design & build',
+		title: 'virtual-design-build',
 		icon: icon2,
 	},
 	{
 		img: serviceImage3,
-		title: 'Building & Engineering',
+		title: 'building-engineering',
 		icon: icon3,
 	},
 	{
 		img: serviceImage4,
-		title: 'Building Construction',
+		title: 'building-construction',
 		icon: icon4,
 	},
 	{
 		img: serviceImage5,
-		title: 'Interior Developments',
+		title: 'interior-developments',
 		icon: icon5,
 	},
 ];

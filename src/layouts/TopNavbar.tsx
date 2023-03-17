@@ -1,20 +1,43 @@
-import React from 'react';
 import { BsEnvelope, BsGlobe, BsTelephone } from 'react-icons/bs';
+import i18next from 'i18next';
 import { LANGUAGES, SOCIAL_MEDIA } from '../constants/navbar';
+import { UseI18nContext } from '../context/i18n';
+import { Language } from '../apps/react-app-env';
 
 const NavbarLanguages = () => {
+	const i18nContext = UseI18nContext();
+
+	const onLanguageChange = (lang: Language) => {
+		document.documentElement.lang = lang?.code || 'en';
+
+		i18nContext.setLanguage(lang);
+		i18next.changeLanguage(lang.code);
+
+		if (lang?.rtl) {
+			document.body.classList.add('rtl');
+			document.documentElement.dir = 'rlt';
+		} else {
+			document.body.classList.remove('rtl');
+			document.documentElement.dir = 'ltr';
+		}
+	};
+
 	return (
 		<>
-			{LANGUAGES.map((lang) => (
-				<li key={lang.title}>
-					<a
-						className={`dropdown-item ${lang.rtl ? 'arabic-font' : ''}`}
-						href={`#${lang.title}`}
-					>
-						{lang.title}
-					</a>
-				</li>
-			))}
+			{LANGUAGES.map((lang) =>
+				lang.code === i18nContext.language?.code ? (
+					<></>
+				) : (
+					<li key={lang.title}>
+						<button
+							className={`dropdown-item ${lang.rtl ? 'arabic-font' : ''}`}
+							onClick={() => onLanguageChange(lang)}
+						>
+							{lang.title}
+						</button>
+					</li>
+				)
+			)}
 		</>
 	);
 };

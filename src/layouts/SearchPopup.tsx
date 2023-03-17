@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { BiSearchAlt } from 'react-icons/bi';
 import { MdOutlineClose } from 'react-icons/md';
 import { useNavigate } from 'react-router-dom';
 
 function SearchPopup(props: SearchPopupProps) {
 	const navigateTo = useNavigate();
+	const { t } = useTranslation('navbar');
 
 	useEffect(() => {
 		document.addEventListener('click', (event) => {
@@ -34,7 +36,7 @@ function SearchPopup(props: SearchPopupProps) {
 			<form id='js-popup-search-form' onSubmit={onFormSubmit}>
 				<input
 					type='text'
-					placeholder='What are you looking for?'
+					placeholder={t('search-placeholder').toString()}
 					name='query'
 					ref={props.formInputRef}
 				/>

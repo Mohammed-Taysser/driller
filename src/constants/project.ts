@@ -11,22 +11,22 @@ import icon4 from '../assets/images/icons/category/icon-4.svg';
 const PROJECTS = [
 	{
 		img: projectImage1,
-		title: 'Rowson Construction',
+		title: 'rowson-construction',
 		icon: icon1,
 	},
 	{
 		img: projectImage2,
-		title: 'Bridge Trangle Core',
+		title: 'bridge-trangle-core',
 		icon: icon2,
 	},
 	{
 		img: projectImage3,
-		title: 'Contemporary Villa',
+		title: 'contemporary-villa',
 		icon: icon3,
 	},
 	{
 		img: projectImage4,
-		title: 'Industrial Services',
+		title: 'industrial-services',
 		icon: icon4,
 	},
 ];

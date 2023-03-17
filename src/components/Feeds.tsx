@@ -1,5 +1,7 @@
+import { useTranslation } from 'react-i18next';
 import { BsCalendar2Event } from 'react-icons/bs';
 import { FiUser } from 'react-icons/fi';
+import { MdArrowForwardIos } from 'react-icons/md';
 import { Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FEEDS } from '../constants/feed';
@@ -8,9 +10,10 @@ import overlay from '../assets/images/background/feed-overlay.png';
 
 import 'swiper/css';
 import 'swiper/css/autoplay';
-import { MdArrowForwardIos } from 'react-icons/md';
 
 function SingleSlide({ feed = { img: '', title: '', date: '', body: '' } }) {
+	const { t } = useTranslation();
+
 	return (
 		<div className='blog-card'>
 			<div className='blog-img'>
@@ -35,11 +38,11 @@ function SingleSlide({ feed = { img: '', title: '', date: '', body: '' } }) {
 					</span>
 				</div>
 				<h3 className='blog-title'>
-					<a href='#single-blog'>{feed.title}</a>
+					<a href='#single-blog'>{t(feed.title)}</a>
 				</h3>
-				<p className='blog-text'>{feed.body}</p>
+				<p className='blog-text'>{t(feed.body)}</p>
 				<a href='#single-blog' className='line-btn'>
-					Read More
+					{t('read-more')}
 					<MdArrowForwardIos className='fs-5 my-0 mx-2' />
 				</a>
 			</div>
@@ -48,6 +51,8 @@ function SingleSlide({ feed = { img: '', title: '', date: '', body: '' } }) {
 }
 
 function Feeds() {
+	const { t } = useTranslation();
+
 	return (
 		<section
 			className='feed-section py-5 mb-5'
@@ -61,12 +66,12 @@ function Feeds() {
 						<div className='shape left'>
 							<div className='dots'></div>
 						</div>
-						LETEST BLOG
+						{t('latest-blogs')}
 						<div className='shape right'>
 							<div className='dots'></div>
 						</div>
 					</div>
-					<div className='sec-title'>Latest News & Feeds</div>
+					<div className='sec-title'>{t('latest-blogs-feeds')}</div>
 				</div>
 				<Swiper
 					modules={[Autoplay]}

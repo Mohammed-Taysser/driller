@@ -1,9 +1,10 @@
 import { HiOutlinePlus } from 'react-icons/hi';
 import { MdArrowForwardIos } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 import { Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { useTranslation } from 'react-i18next';
 import { PROJECTS } from '../constants/project';
-import { Link } from 'react-router-dom';
 
 import projectPattern from '../assets/images/background/bg-projects-pattern.png';
 
@@ -11,23 +12,25 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 
 function SingleSlide({ project = { img: '', title: '' } }) {
+	const { t } = useTranslation();
+
 	return (
 		<div className='text-center single-slide m-3'>
 			<div className='project-image'>
-				<img src={project.img} alt={project.title} />
+				<img src={project.img} alt={t(project.title).toString()} />
 			</div>
 			<div className='project-content'>
 				<Link
 					className='project-title'
 					to='/single-project'
-					title={project.title}
+					title={t(project.title).toString()}
 				>
-					{project.title}
+					{t(project.title).toString()}
 				</Link>
 				<Link
 					className='project-icon'
 					to='/single-project'
-					title={project.title}
+					title={t(project.title).toString()}
 				>
 					<HiOutlinePlus />
 				</Link>
@@ -37,6 +40,8 @@ function SingleSlide({ project = { img: '', title: '' } }) {
 }
 
 function Projects() {
+	const { t } = useTranslation();
+
 	return (
 		<section
 			className='our-projects-section py-5 mt-5'
@@ -49,17 +54,17 @@ function Projects() {
 					<div className='col-auto my-3'>
 						<div className='title-area'>
 							<div className='sub-title'>
-								PROJECT GALLERY
+								{t('project-gallery').toUpperCase()}
 								<div className='shape right'>
 									<div className='dots'></div>
 								</div>
 							</div>
-							<div className='sec-title'>See Our Portfolio</div>
+							<div className='sec-title'>{t('see-our-portfolio')}</div>
 						</div>
 					</div>
 					<div className='col-auto my-3'>
 						<Link className='btn-aurora' to='/projects'>
-							view all projects
+							{t('view-all-projects')}
 							<MdArrowForwardIos className='fs-5 my-0 mx-2' />
 						</Link>
 					</div>

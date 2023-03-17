@@ -6,16 +6,23 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { SERVICES } from '../constants/service';
 
 import servicePattern from '../assets/images/background/bg-service-pattern.png';
+import { useTranslation } from 'react-i18next';
 import BGOverlay from '../assets/images/icons/service-pattern.png';
 
 import 'swiper/css';
 import 'swiper/css/autoplay';
 
 function SingleSlide({ service = { img: '', title: '', icon: '' } }) {
+	const { t } = useTranslation();
+
 	return (
 		<div className='nice-shadow single-slide'>
 			<div className='service-image'>
-				<img className='img-fluid' src={service.img} alt={service.title} />
+				<img
+					className='img-fluid'
+					src={service.img}
+					alt={t(service.title).toString()}
+				/>
 			</div>
 			<div
 				className='service-content p-3'
@@ -26,20 +33,20 @@ function SingleSlide({ service = { img: '', title: '', icon: '' } }) {
 				<Link
 					className='service-title h5 text-decoration-none'
 					to='/single-service'
-					title={service.title}
+					title={t(service.title).toString()}
 				>
-					{service.title}
+					{t(service.title)}
 				</Link>
-				<p className='service-info small mb-0 mt-2'>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quasi
-					numquam, quod minima nam a. Autem pariatur aspernatur magnam incidunt
-					voluptates
-				</p>
+				<p className='service-info small mb-0 mt-2'>{t('lorem')}</p>
 				<div className='service-icon'>
 					<img src={service.icon} alt='service-icon' />
 				</div>
 			</div>
-			<Link className='service-btn' to='/single-service' title={service.title}>
+			<Link
+				className='service-btn'
+				to='/single-service'
+				title={t(service.title).toString()}
+			>
 				<TfiAngleRight className='fs-2' />
 			</Link>
 		</div>
@@ -47,6 +54,8 @@ function SingleSlide({ service = { img: '', title: '', icon: '' } }) {
 }
 
 function Services() {
+	const { t } = useTranslation();
+
 	return (
 		<section
 			className='our-services-section py-5 mb-5'
@@ -59,17 +68,17 @@ function Services() {
 					<div className='col-auto my-3'>
 						<div className='title-area'>
 							<div className='sub-title'>
-								Our Services
+								{t('our-services')}
 								<div className='shape right'>
 									<div className='dots'></div>
 								</div>
 							</div>
-							<div className='sec-title'>The Best Service For You</div>
+							<div className='sec-title'>{t('the-best-service-for-you')}</div>
 						</div>
 					</div>
 					<div className='col-auto my-3 mb-5'>
 						<Link className='btn-aurora' to='/services'>
-							view all services
+							{t('view-all-services')}
 							<MdArrowForwardIos className='fs-5 my-0 mx-2' />
 						</Link>
 					</div>

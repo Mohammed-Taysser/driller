@@ -1,7 +1,9 @@
-import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { BsFillCheckCircleFill } from 'react-icons/bs';
 
 function ContactForm() {
+	const { t } = useTranslation();
+
 	return (
 		<div className='quote-form-wrapper'>
 			<form action='#'>
@@ -11,7 +13,7 @@ function ContactForm() {
 							className='form-control'
 							type='text'
 							name='name'
-							placeholder='Your Name'
+							placeholder={t('enter-name').toString()}
 						/>
 						<i className='far fa-user'></i>
 					</div>
@@ -20,7 +22,7 @@ function ContactForm() {
 							className='form-control'
 							type='email'
 							name='email'
-							placeholder='Email Address'
+							placeholder={t('enter-email').toString()}
 						/>
 						<i className='far fa-envelope'></i>
 					</div>
@@ -29,7 +31,7 @@ function ContactForm() {
 							className='form-control'
 							type='tel'
 							name='number'
-							placeholder='Phone Number'
+							placeholder={t('enter-phone').toString()}
 						/>
 						<i className='fa fa-phone'></i>
 					</div>
@@ -38,7 +40,7 @@ function ContactForm() {
 							className='form-control'
 							type='text'
 							name='subject'
-							placeholder='Subject'
+							placeholder={t('enter-subject').toString()}
 						/>
 						<i className='fas fa-inbox'></i>
 					</div>
@@ -48,13 +50,13 @@ function ContactForm() {
 							name='message'
 							cols={30}
 							rows={3}
-							placeholder='Your Message'
+							placeholder={t('enter-message').toString()}
 						></textarea>
 						<i className='far fa-comment'></i>
 					</div>
 					<div className='form-btn col-12'>
 						<button className='btn-aurora w-100'>
-							SUBMIT REQUEST
+							{t('submit-request').toString().toUpperCase()}
 							<BsFillCheckCircleFill className='mx-2' />
 						</button>
 					</div>

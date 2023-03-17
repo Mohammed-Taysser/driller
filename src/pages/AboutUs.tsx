@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import About from '../components/About';
 import Brands from '../components/Brands';
 import Counter from '../components/Counter';
@@ -7,9 +8,11 @@ import WhyChooseUs from '../components/WhyChooseUs';
 import Banner from '../layouts/Banner';
 
 function AboutUs() {
+	const { t } = useTranslation();
+
 	return (
 		<>
-			<Banner title='About Us' />
+			<Banner title={t('about-us').toString()} />
 			<About noBtn={true} />
 			<Counter />
 			<WhyChooseUs />

@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import bannerImage from '../assets/images/background/banner.jpg';
 
 function Banner({ title = 'banner' }) {
+	const { t } = useTranslation('navbar');
+
 	return (
 		<div
 			className='banner first-section'
@@ -16,7 +19,7 @@ function Banner({ title = 'banner' }) {
 						<ol className='breadcrumb'>
 							<li className='breadcrumb-item'>
 								<Link className='text-white' to='/'>
-									Home
+									{t('home')}
 								</Link>
 							</li>
 							<li className='breadcrumb-item active'>{title}</li>

@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { AiOutlinePhone } from 'react-icons/ai';
 import { BiMap } from 'react-icons/bi';
 import { BsEnvelope } from 'react-icons/bs';
@@ -6,9 +7,11 @@ import Newsletter from '../components/Newsletter';
 import Banner from '../layouts/Banner';
 
 function ContactUs() {
+	const { t } = useTranslation();
+
 	return (
 		<>
-			<Banner title='Contact Us' />
+			<Banner title={t('contact-us').toString()} />
 
 			<section className='contact-us bg-semi-light p-5'>
 				<div className='container my-5'>
@@ -17,7 +20,7 @@ function ContactUs() {
 							<div className='main-content'>
 								<div className='title-area'>
 									<div className='sub-title'>
-										contact us
+										{t('contact-us')}
 										<div className='shape right'>
 											<div className='dots'></div>
 										</div>
@@ -29,7 +32,7 @@ function ContactUs() {
 											<BiMap className='fs-3' />
 										</div>
 										<div className='info mx-3'>
-											<h4>Office Address:</h4>
+											<h4>{t('office-address')}:</h4>
 											<p className='mb-0'>
 												Burnsville, MN 55337 Streat, United States
 											</p>
@@ -40,7 +43,7 @@ function ContactUs() {
 											<AiOutlinePhone className='fs-3' />
 										</div>
 										<div className='info mx-3'>
-											<h4>Contact Number:</h4>
+											<h4>{t('contact-number')}:</h4>
 											<a href='tel:01010101010'> 01010101010</a>
 										</div>
 									</div>
@@ -49,7 +52,7 @@ function ContactUs() {
 											<BsEnvelope className='fs-3' />
 										</div>
 										<div className='info mx-3'>
-											<h4>Mail Address:</h4>
+											<h4>{t('mail-address')}:</h4>
 											<a href='mailto:info@driller.com'> info@driller.com</a>
 										</div>
 									</div>

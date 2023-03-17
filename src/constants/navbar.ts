@@ -1,4 +1,5 @@
-import { IconType } from "react-icons"
+import { Language, SocialMedia } from '../apps/react-app-env';
+
 import {
 	FaFacebookF,
 	FaInstagram,
@@ -6,50 +7,46 @@ import {
 	FaTwitter,
 } from 'react-icons/fa';
 
-interface Language {
-	title: string,
-	rtl: boolean
-}
-
-interface SocialMedia {
-	title: string,
-	icon: IconType
-}
-
 const LANGUAGES: Language[] = [
 	{
 		title: 'German',
 		rtl: false,
+		code: 'de',
 	},
 	{
-		title: 'French',
+		title: 'Français',
 		rtl: false,
-	}, {
-		title: 'Italian',
+		code: 'fr',
+	},
+	{
+		title: 'English',
 		rtl: false,
-	}, {
+		code: 'en',
+	},
+	{
 		title: 'العربية',
 		rtl: true,
-	}
-]
+		code: 'ar',
+	},
+];
 
 const SOCIAL_MEDIA: SocialMedia[] = [
 	{
 		title: 'facebook',
-		icon: FaFacebookF
+		icon: FaFacebookF,
 	},
 	{
 		title: 'linkedin',
-		icon: FaLinkedinIn
+		icon: FaLinkedinIn,
 	},
 	{
 		title: 'twitter',
-		icon: FaTwitter
+		icon: FaTwitter,
 	},
 	{
 		title: 'instagram',
-		icon: FaInstagram
+		icon: FaInstagram,
 	},
-]
+];
 
-export { LANGUAGES, SOCIAL_MEDIA }
+export { LANGUAGES, SOCIAL_MEDIA };

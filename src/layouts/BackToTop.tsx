@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { TbTriangle } from 'react-icons/tb';
 
 function BackToTop() {
+	const { t } = useTranslation('navbar');
 	const btnRef = useRef(null);
 	const [display, setDisplay] = useState('none');
 
@@ -36,7 +38,7 @@ function BackToTop() {
 			className={`back-to-top d-${display}`}
 			ref={btnRef}
 			href='#go-to-top'
-			title='go-to-top'
+			title={t('go-to-top').toString()}
 			onClick={onBtnClick}
 		>
 			<TbTriangle />

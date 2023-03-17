@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { AiOutlinePlus } from 'react-icons/ai';
 import {
 	FaFacebookF,
@@ -16,10 +17,12 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 
 function SingleSlide({ member = { img: '', name: '', cty: '' } }) {
+	const { t } = useTranslation();
+
 	return (
 		<div className='team-card'>
 			<div className='team-img'>
-				<img src={member.img} alt={member.name} />
+				<img src={member.img} alt={t(member.name).toString()} />
 			</div>
 			<div
 				className='team-content'
@@ -67,15 +70,17 @@ function SingleSlide({ member = { img: '', name: '', cty: '' } }) {
 					</div>
 				</div>
 				<h3 className='team-title'>
-					<a href='#single-team'>{member.name}</a>
+					<a href='#single-team'>{t(member.name)}</a>
 				</h3>
-				<span className='team-cty'>{member.cty}</span>
+				<span className='team-cty'>{t(member.cty)}</span>
 			</div>
 		</div>
 	);
 }
 
 function Team() {
+	const { t } = useTranslation();
+
 	return (
 		<section
 			className='our-team-section py-5 mb-5'
@@ -89,12 +94,12 @@ function Team() {
 						<div className='shape left'>
 							<div className='dots'></div>
 						</div>
-						TEAM MEMBERS
+						{t('team-member')}
 						<div className='shape right'>
 							<div className='dots'></div>
 						</div>
 					</div>
-					<div className='sec-title'>Our Professional Team</div>
+					<div className='sec-title'>{t('our-professional-team')}</div>
 				</div>
 				<Swiper
 					modules={[Autoplay]}

@@ -14,8 +14,10 @@ import { SERVICES } from '../constants/service';
 import footerOverlay from '../assets/images/background/bg-footer-overlay.jpg';
 import favicon from '../assets/images/icons/favicon.svg';
 import footerPattern from '../assets/images/icons/service-pattern.png';
+import { useTranslation } from 'react-i18next';
 
 function Footer() {
+	const { t } = useTranslation();
 	const [currentYear] = useState(new Date().getFullYear());
 
 	return (
@@ -40,11 +42,7 @@ function Footer() {
 										/>
 									</Link>
 								</div>
-								<p className='my-3'>
-									Quickly supply alternative strategic theme areas vis-a-vis B2C
-									mindshare. Objectively repurpose stand-alone synergy via
-									user-centric architectures.
-								</p>
+								<p className='my-3'>{t('footer-about')}</p>
 								<div className='social-media'>
 									<a href='#facebook' title='facebook'>
 										<FaFacebookF />
@@ -63,20 +61,22 @@ function Footer() {
 						</div>
 						<div className='col-md-6 col-xl-auto'>
 							<div className='widget footer-widget'>
-								<h3 className='widget-title'>QUICK LINKS</h3>
+								<h3 className='widget-title'>
+									{t('quick-link').toUpperCase()}
+								</h3>
 								<div className='menu-all-pages-container'>
 									<ul className='menu'>
 										<li>
-											<Link to='/about-us'>About Us</Link>
+											<Link to='/about-us'>{t('about-us')}</Link>
 										</li>
 										<li>
-											<Link to='/services'>Services</Link>
+											<Link to='/services'>{t('services')}</Link>
 										</li>
 										<li>
-											<Link to='/projects'>Projects</Link>
+											<Link to='/projects'>{t('projects')}</Link>
 										</li>
 										<li>
-											<Link to='/contact-us'>Contact Us</Link>
+											<Link to='/contact-us'>{t('contact-us')}</Link>
 										</li>
 									</ul>
 								</div>
@@ -84,12 +84,12 @@ function Footer() {
 						</div>
 						<div className='col-md-6 col-xl-auto'>
 							<div className='widget footer-widget'>
-								<h3 className='widget-title'>SERVICES</h3>
+								<h3 className='widget-title'>{t('services').toUpperCase()}</h3>
 								<div className='menu-all-pages-container'>
 									<ul className='menu'>
 										{SERVICES.map((service) => (
 											<li key={service.title}>
-												<Link to='/single-service'>{service.title}</Link>
+												<Link to='/single-service'>{t(service.title)}</Link>
 											</li>
 										))}
 									</ul>
@@ -98,15 +98,13 @@ function Footer() {
 						</div>
 						<div className='col-md-6 col-xl-auto'>
 							<div className='widget newsletter-widget footer-widget'>
-								<h3 className='widget-title'>Subscribe</h3>
-								<p className='footer-text'>
-									Subscribe For Our Latest News &amp; Articles.
-								</p>
+								<h3 className='widget-title'>{t('subscribe')}</h3>
+								<p className='footer-text'>{t('footer-subscribe')}</p>
 								<form className='newsletter-form'>
 									<input
 										className='form-control'
 										type='email'
-										placeholder='Enter Email'
+										placeholder={t('enter-email').toString()}
 									/>
 									<button className='icon-btn' type='submit' title='send'>
 										<FaRegPaperPlane />
@@ -128,7 +126,7 @@ function Footer() {
 					<div className='row justify-content-between align-items-center'>
 						<div className='col-auto'>
 							<p className='copyright-text'>
-								Copyright <AiOutlineCopyright />
+								{t('copyright')} <AiOutlineCopyright />
 								<span className='mx-1'>2022</span>-
 								<span className='mx-1'>{currentYear}</span>
 								<a
@@ -136,19 +134,19 @@ function Footer() {
 									rel='noreferrer noopener'
 									target='_blank'
 								>
-									Mohammed-Taysser
+									{t('Mohammed-Taysser')}
 								</a>
-								. All Rights Reserved.
+								. {t('all-right')}.
 							</p>
 						</div>
 						<div className='col-auto'>
 							<div className='footer-links'>
 								<ul>
 									<li>
-										<Link to='/about-us'>Privacy Policy</Link>
+										<Link to='/about-us'>{t('privacy-policy')}</Link>
 									</li>
 									<li>
-										<Link to='/about-us'>Terms of Use</Link>
+										<Link to='/about-us'>{t('terms-of-use')}</Link>
 									</li>
 								</ul>
 							</div>

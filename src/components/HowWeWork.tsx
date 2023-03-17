@@ -1,10 +1,13 @@
 import { BsShieldCheck } from 'react-icons/bs';
 import { MdOutlineConstruction, MdOutlineDesignServices } from 'react-icons/md';
+import { useTranslation } from 'react-i18next';
 import { RiFilePaper2Line } from 'react-icons/ri';
 
 import overlay from '../assets/images/background/how-we-work-overlay.jpg';
 
 function HowWeWork() {
+	const { t } = useTranslation();
+
 	return (
 		<section
 			className='how-we-work p-5'
@@ -21,12 +24,12 @@ function HowWeWork() {
 									<div className='shape left'>
 										<div className='dots'></div>
 									</div>
-									HOW WE WORK
+									{t('how-we-work').toUpperCase()}
 									<div className='shape right'>
 										<div className='dots'></div>
 									</div>
 								</div>
-								<div className='sec-title'>Our Work Process</div>
+								<div className='sec-title'>{t('our-work-process')}</div>
 							</div>
 						</div>
 					</div>
@@ -37,9 +40,11 @@ function HowWeWork() {
 							<div className='process-card-icon'>
 								<RiFilePaper2Line />
 							</div>
-							<h3 className='process-card-title'>Planning</h3>
+							<h3 className='process-card-title'>{t('planning')}</h3>
 							<p className='process-card-text'>
-								Uniquely orchestrate seamless potentialities via real-time.
+								{t(
+									'uniquely-orchestrate-seamless-potentialities-via-real-time'
+								)}
 							</p>
 						</div>
 					</div>
@@ -48,9 +53,11 @@ function HowWeWork() {
 							<div className='process-card-icon'>
 								<MdOutlineDesignServices />
 							</div>
-							<h3 className='process-card-title'>Design</h3>
+							<h3 className='process-card-title'>{t('design')}</h3>
 							<p className='process-card-text'>
-								Uniquely orchestrate seamless potentialities via real-time.
+								{t(
+									'uniquely-orchestrate-seamless-potentialities-via-real-time'
+								)}
 							</p>
 						</div>
 					</div>
@@ -59,9 +66,11 @@ function HowWeWork() {
 							<div className='process-card-icon'>
 								<MdOutlineConstruction />
 							</div>
-							<h3 className='process-card-title'>Construct</h3>
+							<h3 className='process-card-title'>{t('construct')}</h3>
 							<p className='process-card-text'>
-								Uniquely orchestrate seamless potentialities via real-time.
+								{t(
+									'uniquely-orchestrate-seamless-potentialities-via-real-time'
+								)}
 							</p>
 						</div>
 					</div>
@@ -70,9 +79,11 @@ function HowWeWork() {
 							<div className='process-card-icon'>
 								<BsShieldCheck />
 							</div>
-							<h3 className='process-card-title'>Finishing</h3>
+							<h3 className='process-card-title'>{t('finishing')}</h3>
 							<p className='process-card-text'>
-								Uniquely orchestrate seamless potentialities via real-time.
+								{t(
+									'uniquely-orchestrate-seamless-potentialities-via-real-time'
+								)}
 							</p>
 						</div>
 					</div>

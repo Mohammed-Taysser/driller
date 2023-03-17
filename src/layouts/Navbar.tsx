@@ -1,13 +1,17 @@
 import { useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { BsSearch } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import MobileNavbar from './MobileNavbar';
 import SearchPopup from './SearchPopup';
 import TopNavbar from './TopNavbar';
+import { StickyNavbarProps } from '../apps/react-app-env';
 
 import favicon from '../assets/images/icons/favicon.svg';
 
 function StickyNavbar(props: StickyNavbarProps) {
+	const { t } = useTranslation('navbar');
+
 	return (
 		<div className='stick-navbar'>
 			<div className='stick-navbar-inner'>
@@ -43,41 +47,53 @@ function StickyNavbar(props: StickyNavbarProps) {
 									<div className='main-menu d-none d-lg-inline-block'>
 										<ul className='list-unstyled mb-0'>
 											<li>
-												<Link to='/'>Home</Link>
+												<Link to='/'>{t('home')}</Link>
 											</li>
 											<li>
-												<Link to='/about-us'>About Us</Link>
+												<Link to='/about-us'>{t('about-us')}</Link>
 											</li>
 											<li className='menu-item-has-children'>
-												<Link to='/services'>Services</Link>
+												<Link to='/services'>{t('services')}</Link>
 												<ul className='sub-menu'>
 													<li>
-														<Link to='/single-service'>Service Title</Link>
+														<Link to='/single-service'>
+															{t('service-title')}
+														</Link>
 													</li>
 													<li>
-														<Link to='/single-service'>Service Title</Link>
+														<Link to='/single-service'>
+															{t('service-title')}
+														</Link>
 													</li>
 													<li>
-														<Link to='/single-service'>Service Title</Link>
+														<Link to='/single-service'>
+															{t('service-title')}
+														</Link>
 													</li>
 												</ul>
 											</li>
 											<li className='menu-item-has-children'>
-												<Link to='/projects'>Projects</Link>
+												<Link to='/projects'>{t('projects')}</Link>
 												<ul className='sub-menu'>
 													<li>
-														<Link to='/single-project'>Project Title</Link>
+														<Link to='/single-project'>
+															{t('project-title')}
+														</Link>
 													</li>
 													<li>
-														<Link to='/single-project'>Project Title</Link>
+														<Link to='/single-project'>
+															{t('project-title')}
+														</Link>
 													</li>
 													<li>
-														<Link to='/single-project'>Project Title</Link>
+														<Link to='/single-project'>
+															{t('project-title')}
+														</Link>
 													</li>
 												</ul>
 											</li>
 											<li>
-												<Link to='/contact-us'>Contact Us</Link>
+												<Link to='/contact-us'>{t('contact-us')}</Link>
 											</li>
 											<li>
 												<a

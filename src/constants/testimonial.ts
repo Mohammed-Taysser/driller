@@ -6,27 +6,27 @@ import member4 from '../assets/images/testimonial/testimonial-4.jpg';
 const TESTIMONIALS = [
 	{
 		img: member4,
-		name: 'Sunzida Carlose',
-		position: 'CEO of Kamlavai',
-		body: 'Very niche this transform 24/7 schemas extensible synergy. Progressively develop inexpensive catalysts for change before transparent customer Tourism.',
+		name: 'sunzida-carlose',
+		position: 'ceo-of-kamlavai',
+		body: 'very-niche-this-transform-24-7-schemas-extensible-synergy-progressively-develop-inexpensive-catalysts-for-change-before-transparent-customer-tourism',
 	},
 	{
 		img: member2,
-		name: 'Juniatur Rahman',
-		position: 'CEO of Gazal',
-		body: 'Get started wit transform 24/7 schemas extensible synergy. Progressively develop inexpensive catalysts for change before transparent customer went on.',
+		name: 'juniatur-rahman',
+		position: 'ceo-of-gazal',
+		body: 'get-started-wit-transform-24-7-schemas-extensible-synergy-progressively-develop-inexpensive-catalysts-for-change-before-transparent-customer-went-on',
 	},
 	{
 		img: member3,
-		name: 'Abraham Khalil',
-		position: 'CEO Angfuzsoft',
-		body: 'Moral Values in transform 24/7 schemas extensible synergy. Progressively develop inexpensive catalysts for change before transparent customer Germany.',
+		name: 'abraham-khalil',
+		position: 'ceo-angfuzsoft',
+		body: 'moral-values-in-transform-24-7-schemas-extensible-synergy-progressively-develop-inexpensive-catalysts-for-change-before-transparent-customer-germany',
 	},
 	{
 		img: member1,
-		name: 'Rubaida Kanom',
-		position: 'CEO of Maithon',
-		body: 'Synergistically transform 24/7 schemas extensible synergy. Progressively develop inexpensive catalysts for change before transparent customer service.',
+		name: 'rubaida-kanom',
+		position: 'ceo-of-maithon',
+		body: 'synergistically-transform-24-7-schemas-extensible-synergy-progressively-develop-inexpensive-catalysts-for-change-before-transparent-customer-service',
 	},
 ];
 

@@ -1,5 +1,18 @@
 /// <reference types="react-scripts" />
 
+import { IconType } from 'react-icons';
+
+interface Language {
+	title: string;
+	code: string;
+	rtl: boolean;
+}
+
+interface SocialMedia {
+	title: string;
+	icon: IconType;
+}
+
 interface ErrorBoundaryProps {
 	children: ReactNode;
 }

@@ -1,9 +1,13 @@
 import { BrowserRouter } from 'react-router-dom';
+import { useEffect } from 'react';
 import MainRoutes from './routes';
 import ErrorBoundary from './ErrorBoundary';
-import '../assets/scss/core.scss';
+import {I18nContextProvider} from '../context/i18n'
+
+import './i18n';
+
 import 'bootstrap/dist/js/bootstrap.bundle';
-import { useEffect } from 'react';
+import '../assets/scss/core.scss';
 
 function App() {
 	useEffect(() => {
@@ -12,9 +16,11 @@ function App() {
 
 	return (
 		<ErrorBoundary>
-			<BrowserRouter>
-				<MainRoutes />
-			</BrowserRouter>
+			<I18nContextProvider>
+				<BrowserRouter>
+					<MainRoutes />
+				</BrowserRouter>
+			</I18nContextProvider>
 		</ErrorBoundary>
 	);
 }

@@ -1,8 +1,8 @@
 const FEATURES = [
-	'First Class Quality Service',
-	'service with reasonable price',
-	'Immediate 24/ 7 Emergency',
-	'Stylistic formula method',
+	'first-class-quality-service',
+	'service-with-reasonable-price',
+	'immediate-24-7-emergency',
+	'stylistic-formula-method',
 ];
 
 export { FEATURES };

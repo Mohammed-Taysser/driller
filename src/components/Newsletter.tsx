@@ -1,7 +1,9 @@
-import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { HiCheckCircle } from 'react-icons/hi';
 
 function Newsletter() {
+	const { t } = useTranslation();
+
 	return (
 		<section className='subscribe-box-section py-5'>
 			<div className='container'>
@@ -9,10 +11,10 @@ function Newsletter() {
 					<div className='col-md-6 my-3'>
 						<div>
 							<p className='subscribe-box-text text-muted'>
-								READY FOR A SUBSCRIPTION?
+								{t('ready-for-a-subscription').toUpperCase()}
 							</p>
 							<h4 className='subscribe-box-title h1'>
-								Subscribe Our Latest News
+								{t('subscribe-our-latest-news')}
 							</h4>
 						</div>
 					</div>
@@ -23,12 +25,12 @@ function Newsletter() {
 									<input
 										className='form-control'
 										type='email'
-										placeholder='Enter Email Address'
+										placeholder={t('enter-email').toString()}
 									/>
 								</div>
 								<div className='col-md-5'>
 									<button type='submit' className='btn-aurora'>
-										SUBSCRIBE
+										{t('subscribe').toUpperCase()}
 										<HiCheckCircle className='mx-2' />
 									</button>
 								</div>

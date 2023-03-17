@@ -1,8 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 import { BsSearch } from 'react-icons/bs';
 import { FaAngleDown, FaAngleRight, FaTimes } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { LinkWithMenuProps, MobileNavbarProps } from '../apps/react-app-env';
 
 import favicon from '../assets/images/icons/favicon.svg';
 
@@ -25,7 +27,7 @@ const LinkWithMenu = (props: LinkWithMenuProps) => {
 				{isClick ? (
 					<FaAngleDown className='mx-2' />
 				) : (
-					<FaAngleRight className='mx-2' />
+					<FaAngleRight className='mx-2 angle' />
 				)}
 				{props.title}
 			</Link>
@@ -45,6 +47,8 @@ const LinkWithMenu = (props: LinkWithMenuProps) => {
 };
 
 function MobileNavbar(props: MobileNavbarProps) {
+	const { t } = useTranslation('navbar');
+
 	useEffect(() => {
 		document.addEventListener('click', (event) => {
 			if (event.target !== props.navbarHumbuggerRef?.current) {
@@ -92,46 +96,64 @@ function MobileNavbar(props: MobileNavbarProps) {
 					<ul>
 						<li>
 							<Link to='/'>
-								<FaAngleRight className='mx-2' />
-								Home
+								<FaAngleRight className='mx-2 angle' />
+								{t('home')}
 							</Link>
 						</li>
 						<li>
 							<Link to='/about-us'>
-								<FaAngleRight className='mx-2' />
-								About Us
+								<FaAngleRight className='mx-2 angle' />
+								{t('about-us')}
 							</Link>
 						</li>
 						<li>
 							<Link to='/contact-us'>
-								<FaAngleRight className='mx-2' />
-								Contact Us
+								<FaAngleRight className='mx-2 angle' />
+								{t('contact-us')}
 							</Link>
 						</li>
 
 						<LinkWithMenu
 							path='/services'
-							title='Services'
+							title={t('services').toString()}
 							items={[
-								{ path: '/single-service', title: 'Service Title' },
-								{ path: '/single-service', title: 'Service Title' },
-								{ path: '/single-service', title: 'Service Title' },
+								{
+									path: '/single-service',
+									title: t('service-title').toString(),
+								},
+								{
+									path: '/single-service',
+									title: t('service-title').toString(),
+								},
+								{
+									path: '/single-service',
+									title: t('service-title').toString(),
+								},
 							]}
 						/>
 						<LinkWithMenu
 							path='/projects'
-							title='Projects'
+							title={t('projects').toString()}
 							items={[
-								{ path: '/single-project', title: 'Project Title' },
-								{ path: '/single-project', title: 'Project Title' },
-								{ path: '/single-project', title: 'Project Title' },
+								{
+									path: '/single-project',
+									title: t('project-title').toString(),
+								},
+								{
+									path: '/single-project',
+									title: t('project-title').toString(),
+								},
+								{
+									path: '/single-project',
+									title: t('project-title').toString(),
+								},
 							]}
 						/>
 
 						<li>
 							<a onClick={props.onSearchBtnClick} href='#search' title='search'>
-								<FaAngleRight className='mx-2' />
-								Search
+								<FaAngleRight className='mx-2 angle' />
+								{t('search')}
 								<BsSearch className='fas fa-search cursor-pointer mx-2' />
 							</a>
 						</li>

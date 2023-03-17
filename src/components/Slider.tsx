@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { BiRightArrow } from 'react-icons/bi';
 import { MdArrowForwardIos } from 'react-icons/md';
 import { Link } from 'react-router-dom';
@@ -28,6 +29,8 @@ function SlideNextButton() {
 }
 
 function SingleSlide({ img = '' }) {
+	const { t } = useTranslation();
+
 	return (
 		<div className='single-slide'>
 			<div
@@ -40,18 +43,19 @@ function SingleSlide({ img = '' }) {
 				<div className='col-md-5 offset-md-1'>
 					<div className='px-4 py-5 hero-content'>
 						<h1 className='slider-title js-slider-title'>
-							We Help You Build And Develop Your Business
+							{t('we-help-you-build-and-develop-your-business')}
 						</h1>
 						<p className='lead'>
-							We provide you with the best solutions in the single-serve and
-							machine market.
+							{t(
+								'we-provide-you-with-the-best-solutions-in-the-single-serve-and-machine-market'
+							)}
 						</p>
 						<p className='mb-0'>
-							Our partnership is modular, scalable, and customizable.
+							{t('our-partnership-is-modular-scalable-and-customizable')}
 						</p>
-						<p>Optimum quality, supply reliability, Italian know-how.</p>
+						<p>{t('optimum-quality-supply-reliability-italian-know-how')}</p>
 						<Link className='mt-4 btn-aurora' to='/about-us'>
-							LEARN MORE
+							{t('read-more')}
 							<MdArrowForwardIos className='fs-5 my-0 mx-2' />
 						</Link>
 					</div>
