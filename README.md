@@ -16,6 +16,7 @@ for live [demo](https://driller.vercel.app/)
 | Contact Us     | `/contact-us`      |
 | Services       | `/services`        |
 | Projects       | `/projects`        |
+| Results        | `/results`         |
 | Single Project | `/single-projects` |
 | Single Service | `/single-service`  |
 
