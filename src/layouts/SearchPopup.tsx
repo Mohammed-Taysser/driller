@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { BiSearchAlt } from 'react-icons/bi';
 import { MdOutlineClose } from 'react-icons/md';
 import { useNavigate } from 'react-router-dom';
+import { SearchPopupProps } from '../apps/react-app-env';
 
 function SearchPopup(props: SearchPopupProps) {
 	const navigateTo = useNavigate();
