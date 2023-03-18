@@ -4,9 +4,11 @@ import { SERVICES } from '../constants/service';
 import Banner from '../layouts/Banner';
 import Brands from '../components/Brands';
 import { useTranslation } from 'react-i18next';
+import usePageTitle from '../hooks/usePageTitle';
 
 function Services() {
 	const { t } = useTranslation();
+	usePageTitle('Services')
 
 	return (
 		<>

@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { TbTriangle } from 'react-icons/tb';
 
 function BackToTop() {
-	const { t } = useTranslation('navbar');
+	const { t } = useTranslation();
 	const btnRef = useRef(null);
 	const [display, setDisplay] = useState('none');
 

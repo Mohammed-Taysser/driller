@@ -3,12 +3,14 @@ import { BiPhone } from 'react-icons/bi';
 import { BsCheck2Circle } from 'react-icons/bs';
 import { MdOutlineMail } from 'react-icons/md';
 import Banner from '../layouts/Banner';
+import usePageTitle from '../hooks/usePageTitle';
 
 import serviceInnerImage1 from '../assets/images/background/service-details-inner-1.jpg';
 import serviceImage from '../assets/images/background/service-details.jpg';
 
 function ProjectDetails() {
 	const { t } = useTranslation();
+	usePageTitle('Project Details');
 
 	return (
 		<>

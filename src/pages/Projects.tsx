@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 import { PROJECTS } from '../constants/project';
 import Banner from '../layouts/Banner';
 import { useTranslation } from 'react-i18next';
+import usePageTitle from '../hooks/usePageTitle';
 
 function Projects() {
+	usePageTitle('Projects');
 	const { t } = useTranslation();
 
 	return (

@@ -10,8 +10,11 @@ import Team from '../components/Team';
 import Testimonials from '../components/Testimonials';
 import WhyChooseUs from '../components/WhyChooseUs';
 import Contact from '../components/homepage/Contact';
+import usePageTitle from '../hooks/usePageTitle';
 
 function Homepage() {
+	usePageTitle('Homepage');
+
 	return (
 		<div className=''>
 			<Slider />

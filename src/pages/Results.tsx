@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 import { PROJECTS } from '../constants/project';
 import { SERVICES } from '../constants/service';
 import Banner from '../layouts/Banner';
+import usePageTitle from '../hooks/usePageTitle';
 
 function Results() {
 	const { t } = useTranslation();
+	usePageTitle('Results');
 
 	return (
 		<>

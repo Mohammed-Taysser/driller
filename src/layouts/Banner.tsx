@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import bannerImage from '../assets/images/background/banner.jpg';
 
 function Banner({ title = 'banner' }) {
-	const { t } = useTranslation('navbar');
+	const { t } = useTranslation();
 
 	return (
 		<div

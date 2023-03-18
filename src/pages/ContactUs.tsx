@@ -5,9 +5,11 @@ import { BsEnvelope } from 'react-icons/bs';
 import ContactForm from '../components/ContactForm';
 import Newsletter from '../components/Newsletter';
 import Banner from '../layouts/Banner';
+import usePageTitle from '../hooks/usePageTitle';
 
 function ContactUs() {
 	const { t } = useTranslation();
+	usePageTitle('Contact Us');
 
 	return (
 		<>

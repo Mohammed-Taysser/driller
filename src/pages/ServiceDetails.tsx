@@ -6,12 +6,14 @@ import { BsArrowRight, BsCheck2Circle } from 'react-icons/bs';
 import { ImFilePdf } from 'react-icons/im';
 import { MdOutlineMail } from 'react-icons/md';
 import { Link } from 'react-router-dom';
+import usePageTitle from '../hooks/usePageTitle';
 
 import serviceInnerImage1 from '../assets/images/background/service-details-inner-1.jpg';
 import serviceImage from '../assets/images/background/service-details.jpg';
 
 function ServiceDetails() {
 	const { t } = useTranslation();
+	usePageTitle('Service Details');
 
 	return (
 		<>

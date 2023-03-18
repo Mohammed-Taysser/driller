@@ -6,9 +6,11 @@ import Team from '../components/Team';
 import Testimonials from '../components/Testimonials';
 import WhyChooseUs from '../components/WhyChooseUs';
 import Banner from '../layouts/Banner';
+import usePageTitle from '../hooks/usePageTitle';
 
 function AboutUs() {
 	const { t } = useTranslation();
+	usePageTitle('About Us');
 
 	return (
 		<>

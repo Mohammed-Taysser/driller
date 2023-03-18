@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom';
 import { VscArrowSmallLeft } from 'react-icons/vsc';
 import { useTranslation } from 'react-i18next';
+import usePageTitle from '../hooks/usePageTitle';
 
 import PageNotFoundImage from '../assets/images/background/404-page.svg';
 
 function PageNotFound() {
 	const { t } = useTranslation();
+	usePageTitle('Page Not Found');
 
 	return (
 		<div className='page-not-found-page my-5 py-5'>
