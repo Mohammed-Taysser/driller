@@ -29,6 +29,14 @@ for live [demo](https://driller.vercel.app/)
 - Customizable colors and fonts
 - Possibility set local options on the page with meta boxes.
 - Fully Responsive
+- Support i18n for internationalization (ar, en, de, fr)
+- Support rtl alignment
+
+## Screenshots
+
+![driller-en](assets/images/driller-en.jpg)
+
+![driller-ar](assets/images/driller-ar.jpg)
 
 ## Used tools
 
